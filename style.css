@@ -1,0 +1,331 @@
+.page {
+    margin: 0px auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', 'Arial', sans-serif !important;
+    text-align: center;
+}
+
+.nav__link {
+    white-space: nowrap;
+    padding-left: 15px;
+    font-size: 2.2vmin;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width:720px) {
+    .nav__link {
+        font-size: 3.5vmin;
+    }
+}
+
+.nav__link:hover {
+    color: #52e5ff;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.link {
+    white-space: nowrap;
+    padding-left: 5px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.link:hover {
+    color: #52e5ff;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.header {
+    margin: 0 auto;
+    background: linear-gradient(#008dc971, #008cc9b6), url(./images/1.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    ;
+}
+
+@media screen and (max-width:720px) {
+    .header {
+        min-height: 40vh;
+    }
+}
+
+
+.header__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1980px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.navigation {
+    color: #fff;
+}
+
+.header__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+    padding: 50px;
+    max-width: 80%;
+}
+
+@media screen and (max-width:720px) {
+    .header__column {
+        height: 40vh;
+        max-width: 100%;
+    }
+}
+
+.header__logo {
+    margin: 0;
+    padding: 0 0 0 5px;
+    max-width: 200px;
+}
+
+@media screen and (max-width:720px) {
+    .header__logo {
+        max-width: 100px;
+    }
+}
+
+.header__span {
+    text-align: right;
+    min-width: 75%;
+}
+
+.header__title {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 5vmin;
+    color: #ffffff;
+    margin: 0;
+}
+
+@media screen and (max-width:720px) {
+    .header__title {
+        font-size: 3.5vmin;
+    }
+}
+
+.header__text {
+    margin: 0 0 0 auto;
+    padding: 0;
+    max-width: 60%;
+    font-size: 2vmin;
+    color: #ffffff;
+}
+
+@media screen and (max-width:720px) {
+    .header__text {
+        font-size: 2.5vmin;
+        max-width: 90%;
+    }
+}
+
+.content {
+    margin: 0;
+    text-align: center;
+}
+
+.content__description {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+    padding: 50px 0;
+
+}
+
+@media screen and (max-width:1280px) {
+    .content__description {
+        width: 90%;
+    }
+}
+
+.content__title {
+    text-transform: uppercase;
+    font-size: 3.5vmin;
+    padding: 0;
+    margin: 0;
+    color: #00a2e9;
+}
+
+@media screen and (max-width:1280px) {
+    .content__title {
+        font-size: 3.5vmin;
+        line-height: 4.5vmin;
+    }
+}
+
+.content__text_white {
+    color: rgb(255, 255, 255);
+}
+
+.content__button {
+    color: rgb(255, 255, 255);
+    /* цвет текста */
+    border: 0;
+    border-radius: 15px;
+    text-decoration: none;
+    /* убирать подчёркивание у ссылок */
+    user-select: none;
+    /* убирать выделение текста */
+    background: rgb(0, 141, 201);
+    /* фон кнопки */
+    padding: .7em 1.5em;
+    /* отступ от текста */
+    outline: none;
+    /* убирать контур в Mozilla */
+}
+
+.content__button:hover {
+    background: rgba(0, 141, 201, 0.5);
+}
+
+/* при наведении курсора мышки */
+.content__button:active {
+    background: rgb(0, 141, 201);
+}
+
+/* при нажатии */
+
+.cards {
+    display: grid;
+    /* Автоматически заполняем на всю ширину grid-контейнера */
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1980px;
+    /* Ширина grid-контейнера */
+    justify-content: center;
+    justify-items: center;
+    /* Размещаем карточку по центру */
+    column-gap: 30px;
+    /* Отступ между колонками */
+    row-gap: 40px;
+    /* Отступ между рядами */
+    margin: 0 auto;
+}
+
+.card {
+    width: 225px;
+    min-height: 160px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* Размещаем элементы в колонку */
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+}
+
+/* При наведении на карточку - меняем цвет тени */
+.card:hover {
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.content__about {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+    background-color: rgba(227, 233, 243, .5);
+}
+
+.content__about:nth-last-child(1) {
+    padding: 50px 0 0 0;
+}
+
+.content__about_width {
+    width: 75%;
+}
+
+.content__text {
+    margin: 0 auto;
+    padding: 25px 0;
+    text-align: center;
+    text-transform: none;
+    font-size: 2vmin;
+    font-weight: 400;
+    line-height: 2.5vmin;
+    list-style-type: none;
+    color: #808080;
+}
+
+@media screen and (max-width:760px) {
+    .content__text {
+        font-size: 3vmin;
+        line-height: 3.5vmin;
+        width: 90%;
+    }
+}
+
+.content__service {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 100%;
+    background: linear-gradient(#008dc971, #008cc9b6), url(./images/2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content__text_white {
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    margin: 0 auto;
+    width: 100%;
+    padding: 70px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #008dc9;
+}
+
+.footer__text {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vmin;
+    line-height: 2.5vmin;
+}
+
+@media screen and (max-width:760px) {
+    .footer__text {
+        font-size: 3.5vmin;
+        line-height: 4vmin;
+    }
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vmin;
+    line-height: 2.5vmin;
+}
+
+.footer__link:hover {
+    color: #52e5ff;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+@media screen and (max-width:720px) {
+    .footer__link {
+        font-size: 3.5vmin;
+        line-height: 4vmin;
+    }
+}
