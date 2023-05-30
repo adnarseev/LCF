@@ -135,10 +135,11 @@
 
 .header__text {
     margin: 0 0 0 auto;
-    padding: 0;
+    padding: 10px;
     max-width: 60%;
     font-size: 2vmin;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
 }
 
 @media screen and (max-width:720px) {
@@ -181,6 +182,8 @@
         line-height: 4.5vmin;
     }
 }
+
+
 
 .content__text_white {
     color: rgb(255, 255, 255);
@@ -342,4 +345,9 @@
         font-size: 3.5vmin;
         line-height: 4vmin;
     }
+}
+
+.content__text_just {
+    text-align: justify;
+    max-width: 75%;
 }
