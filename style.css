@@ -2,9 +2,11 @@
     0% {
         background-image: url(./images/1.jpg)
     }
+
     36% {
         background-image: url(./images/2.jpg)
     }
+
     68% {
         background-image: url(./images/3.jpg)
     }
@@ -40,18 +42,7 @@
     transition-timing-function: ease-in-out;
 }
 
-.link {
-    white-space: nowrap;
-    padding-left: 5px;
-    text-decoration: none;
-    color: #000000;
-}
 
-.link:hover {
-    color: #52e5ff;
-    transition: .5s;
-    transition-timing-function: ease-in-out;
-}
 
 .header {
     margin: 0 auto;
@@ -159,7 +150,6 @@
     text-align: center;
     width: 75%;
     padding: 50px 0;
-
 }
 
 @media screen and (max-width:1280px) {
@@ -204,6 +194,7 @@
     /* отступ от текста */
     outline: none;
     /* убирать контур в Mozilla */
+    margin: 25px 0 0 0;
 }
 
 .content__button:hover {
@@ -215,13 +206,23 @@
     background: rgb(0, 141, 201);
 }
 
-/* при нажатии */
+.card {
+    width: 225px;
+    min-height: 160px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+    justify-content: center;
+}
 
 .cards {
     display: grid;
     /* Автоматически заполняем на всю ширину grid-контейнера */
     grid-template-columns: repeat(auto-fill, 225px);
-    width: 100%;
+    width: 62%;
     max-width: 1980px;
     /* Ширина grid-контейнера */
     justify-content: center;
@@ -232,23 +233,20 @@
     row-gap: 40px;
     /* Отступ между рядами */
     margin: 0 auto;
-}
-
-.card {
-    width: 225px;
-    min-height: 160px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    /* Размещаем элементы в колонку */
-    border-radius: 4px;
-    transition: 0.2s;
-    position: relative;
+    padding: 15px;
 }
 
 /* При наведении на карточку - меняем цвет тени */
 .card:hover {
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card__text {
+    margin: 0;
+    padding: 15px;
+    text-transform: uppercase;
+    
+    font-weight: 600;
 }
 
 .content__about {
@@ -269,15 +267,18 @@
     width: 75%;
 }
 
+.content__service_width {
+    width: 60%;
+}
+
 .content__text {
     margin: 0 auto;
-    padding: 25px 0;
+    padding: 15px 0;
     text-align: center;
     text-transform: none;
     font-size: 2vmin;
     font-weight: 400;
     line-height: 2.5vmin;
-    list-style-type: none;
     color: #808080;
 }
 
@@ -290,6 +291,19 @@
 }
 
 .content__service {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+    padding: 50px 0;
+}
+
+@media screen and (max-width:1280px) {
+    .content__service {
+        width: 90%;
+    }
+}
+
+.content__garant {
     margin: 0 auto;
     padding: 50px 0;
     width: 100%;
@@ -350,4 +364,23 @@
 .content__text_just {
     text-align: justify;
     max-width: 75%;
+}
+
+.link {
+    white-space: nowrap;
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 2.5vmin;
+}
+
+.link:hover {
+    color: #52e5ff;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.map {
+    margin: 0;
+    padding: 25px 0 0 0;
 }
