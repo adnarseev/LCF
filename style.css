@@ -3,14 +3,9 @@
         background-image: url(./images/1.jpg)
     }
 
-    36% {
+    50% {
         background-image: url(./images/2.jpg)
     }
-
-    68% {
-        background-image: url(./images/3.jpg)
-    }
-
 }
 
 .page {
@@ -30,9 +25,11 @@
     color: #fff;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1280px) {
     .nav__link {
-        font-size: 3.5vmin;
+        font-size: 5vmin;
+        padding-left: 0;
+        padding-top: 25px;
     }
 }
 
@@ -62,7 +59,6 @@
     }
 }
 
-
 .header__row {
     display: flex;
     flex-direction: row;
@@ -73,8 +69,22 @@
     padding-top: 40px;
 }
 
+@media screen and (max-width:1280px) {
+    .header__row {
+        flex-direction: column;
+    }
+}
+
 .navigation {
+    display: flex;
+    flex-direction: row;
     color: #fff;
+}
+
+@media screen and (max-width:1280px) {
+    .navigation {
+        flex-direction: column;
+    }
 }
 
 .header__column {
@@ -95,14 +105,8 @@
 
 .header__logo {
     margin: 0;
-    padding: 0 0 0 5px;
-    max-width: 200px;
-}
-
-@media screen and (max-width:720px) {
-    .header__logo {
-        max-width: 100px;
-    }
+    padding: 50px;
+    max-width: 300px;
 }
 
 .header__span {
@@ -207,33 +211,36 @@
 }
 
 .card {
-    width: 225px;
-    min-height: 160px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(0, 141, 201);
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    transition: 0.2s;
-    position: relative;
+    flex-wrap: wrap;
     justify-content: center;
+    position: relative;
 }
 
 .cards {
+    padding-top: 50px;
     display: grid;
-    /* Автоматически заполняем на всю ширину grid-контейнера */
-    grid-template-columns: repeat(auto-fill, 225px);
-    width: 62%;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
     max-width: 1980px;
-    /* Ширина grid-контейнера */
-    justify-content: center;
-    justify-items: center;
-    /* Размещаем карточку по центру */
-    column-gap: 30px;
-    /* Отступ между колонками */
-    row-gap: 40px;
-    /* Отступ между рядами */
     margin: 0 auto;
-    padding: 15px;
+    width: 90%;
+}
+
+@media screen and (max-width: 1280px) {
+    .cards {
+        grid-template-columns: repeat(2, auto);
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .cards {
+        grid-template-columns: repeat(1, auto);
+    }
 }
 
 /* При наведении на карточку - меняем цвет тени */
@@ -241,12 +248,17 @@
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.card:hover .hidden {
+    display: block;
+}
+
 .card__text {
     margin: 0;
-    padding: 15px;
+    padding: 30px 15px;
+    font-weight: 500;
     text-transform: uppercase;
-
-    font-weight: 600;
+    font-size: 2vmin;
+    color: rgb(255, 255, 255);
 }
 
 .content__about {
@@ -307,7 +319,7 @@
     margin: 0 auto;
     padding: 50px 0;
     width: 100%;
-    background: linear-gradient(#008dc971, #008cc9b6), url(./images/2.jpg);
+    background: linear-gradient(#222e3391, #112e3cc4), url(./images/2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
