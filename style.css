@@ -224,7 +224,7 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 20px;
-    max-width: 1980px;
+    max-width: 1280px;
     margin: 0 auto;
     width: 90%;
 }
