@@ -74,20 +74,14 @@
     }
 }
 
-.header__row {
+.header__column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     max-width: 1980px;
     width: 90%;
     margin: 0 auto;
-}
-
-@media screen and (max-width:1280px) {
-    .header__row {
-        flex-direction: column;
-    }
 }
 
 .navigation {
@@ -102,31 +96,15 @@
     }
 }
 
-.header__column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 80vh;
-    padding: 50px;
-    max-width: 80%;
-}
-
-@media screen and (max-width:720px) {
-    .header__column {
-        height: 40vh;
-        max-width: 100%;
-    }
-}
-
 .header__logo {
     margin: 0;
-    padding: 50px;
+    padding: 50px 0 0 0;
     max-width: 320px;
 }
 
 @media screen and (max-width:720px) {
     .header__logo {
-        padding: 0px;
+        padding: 50px 0 0 0;
     }
 }
 
@@ -139,17 +117,15 @@
     text-transform: uppercase;
     font-size: 2vw;
     color: rgb(255, 255, 255);
-    margin: 0 0 0 auto;
+    margin: 0 auto;
     font-family: "Bahnschrift";
-    max-width: 50%;
     opacity: .9;
-    padding-top: 350px;
 }
 
 @media screen and (max-width:1280px) {
     .header__title {
-        font-size: 3vmin;
-        max-width: 90%;
+        max-width: 80%;
+        font-size: 4vw; 
         padding: 50px 0 50px 0;
         margin: 0 auto;
     }
@@ -196,7 +172,6 @@
 .content__title {
     text-transform: uppercase;
     font-size: 3.5vmin;
-    padding: 25px 0 25px 0;
     margin: 0;
     color: rgb(0, 162, 233);
     font-family: "Bahnschrift";
@@ -205,7 +180,14 @@
 @media screen and (max-width:1280px) {
     .content__title {
         font-size: 3.5vmin;
-        line-height: 4.5vmin;
+        line-height: 5.5vmin;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .content__title {
+        font-size: 4vmin;
+        line-height: 5.5vmin;
     }
 }
 
@@ -317,8 +299,8 @@
 
 @media screen and (max-width:760px) {
     .content__text {
-        font-size: 3vmin;
-        line-height: 3.5vmin;
+        font-size: 4vmin;
+        line-height: 4vmin;
         width: 90%;
     }
 }
@@ -398,7 +380,6 @@
 
 .content__text_just {
     text-align: justify;
-    max-width: 75%;
 }
 
 .link {
@@ -449,6 +430,7 @@
 @media screen and (max-width: 720px) {
     .card__hidden_text {
         font-size: 3.5vmin;
+        line-height: 4vmin;
     }
 }
 
@@ -479,7 +461,6 @@
 
 /* Стили для заголовка блока, при нажатии на который появляется дополнительный блок */
 .toggler__label {
-
     display: block;
     margin: 15px auto;
     cursor: pointer;
@@ -493,8 +474,14 @@
     font-size: 2vmin;
     color: rgb(255, 255, 255);
     font-family: "Bahnschrift";
-
 }
+@media screen and (max-width: 1380px) {
+    .toggler__label {
+        font-size: 3vmin;
+        padding: 15px 7px;
+    }
+}
+
 
 /* скрытый блок позиционируется абсолютно, чтобы не оставлять пустое место */
 .toggler__content-box {
