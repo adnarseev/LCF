@@ -486,7 +486,7 @@
 /* скрытый блок позиционируется абсолютно, чтобы не оставлять пустое место */
 .toggler__content-box {
     position: absolute;
-    transform: translate(9999px);
+    transform: translate(-9999px);
     opacity: 0;
 }
 
